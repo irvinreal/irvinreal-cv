@@ -112,6 +112,11 @@ main {
     height: 2rem;
 }
 
+.t-img:hover {
+    height: 3rem;
+    transition: .3s ease-in-out;
+}
+
 .tecnologias-web {
     height: 100vh;
 }
@@ -131,6 +136,22 @@ main {
 }
 
 .nli:hover {
+    border: 3px solid black;
+    padding: 5px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.pi {
+    background: linear-gradient(
+        to bottom,
+        white,
+        rgba(1, 78, 114, 0.116)
+    );;
+    border-radius: 10px;
+}
+
+.title {
     border: 3px solid black;
     padding: 5px;
     border-radius: 8px;
