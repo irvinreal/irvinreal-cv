@@ -2,6 +2,8 @@
 
 body {
     overflow-x: hidden;
+    font-family: 'KoHo', sans-serif !important;
+    position: relative !important;
 }
 
 html::-webkit-scrollbar {
@@ -14,10 +16,20 @@ body::-webkit-scrollbar {
 
 h1 {
     font-family: 'KoHo', sans-serif;
+
 }
 
+/* .navbar-expand {
+    display: flex !important;
+    /* width: 20rem !important; 
+} */
 
-
+/* .image-profile {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    width: 10rem;
+} */
 
 .t-img {
     height: 2rem;
@@ -81,7 +93,7 @@ h1 {
 
 .btn-darkk {
     background-color: rgb(24, 24, 24) !important;
-    border-radius: 7px !important;
+    border-radius: 3px !important;
     padding: 0 12px !important;
     display: flex !important;
     align-items: center !important;
@@ -96,6 +108,7 @@ h1 {
 }
 
 footer {
+    /* font-family: 'KoHo', sans-serif; */
     position: relative;
     height: 100vh;
     display: flex;
@@ -106,4 +119,19 @@ footer {
 .foot {
     position: absolute;
     bottom: 0px;
+}
+
+.btn-hover:hover {
+    transition: .4s ;
+    background-color: rgb(228, 221, 221) !important;
+    /* padding: 0 1.2rem !important; */
+    border-radius: 15px !important;
+    border: 1px solid black !important;
+    color: rgb(39, 39, 39) !important;
+}
+
+.bb {
+    border-left: 1px solid white !important;
+    border-right: 1px solid white !important;
+    border-bottom: 1px solid black !important;
 }
