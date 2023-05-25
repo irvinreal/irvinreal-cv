@@ -1,17 +1,17 @@
+/* font-family: "KoHo", sans-serif;  */
 @import url("https://fonts.googleapis.com/css2?family=KoHo:wght@200;300;400;500&display=swap");
 
+* {
+    font-family: "KoHo", sans-serif !important;
+}
+
+html,
 body {
     overflow-x: hidden;
-    font-family: "KoHo", sans-serif !important;
-    position: relative !important;
 }
 
 html::-webkit-scrollbar {
     width: 0;
-}
-
-h1 {
-    font-family: "KoHo", sans-serif;
 }
 
 .t-img {
@@ -123,15 +123,8 @@ footer {
     border-bottom: 1px solid black !important;
 }
 
-#btn-leucemias {
+/* #btn-leucemias {
     background-color: transparent;
     border-top: 1px solid white;
-}
+} */
 
-.disable {
-    display: none !important;
-}
-
-.visible {
-    display: block;
-}
