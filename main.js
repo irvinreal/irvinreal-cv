@@ -1,5 +1,91 @@
 gsap.registerPlugin(ScrollTrigger);
 
+let ms = gsap.matchMedia();
+ms.add("(max-width: 720px)", () => {
+    // mobile setup code here...
+    gsap.from(".liContacto", {
+        // scrollTrigger: {
+        //     trigger: ".liContacto",
+        //     start: "end end",
+        //     end: "end star",
+        //     // scrub: 1,
+        //     markers: true,
+        //     toggleActions: "restart none reverse none",
+        // },
+        scrollTrigger: {
+            trigger: "#contacto",
+            toggleActions: "restart none reverse none",
+        },
+        duration: 0.7,
+        opacity: 0,
+        scale: 0.3,
+        y: 10,
+        stagger: 0.2,
+    });
+
+    gsap.from(".animatedBtnFooter", {
+        scrollTrigger: {
+            trigger: "#contacto",
+            start: "300px center",
+            end: "300px center",
+            // scrub: 1,
+            // markers: true,
+            toggleActions: "restart none reverse none",
+        },
+        duration: 0.8,
+        opacity: 0,
+        scale: 0.3,
+        y: -70,
+        stagger: 0.2,
+    });
+
+    gsap.from(".boxContacto", {
+        scrollTrigger: {
+            trigger: "#contacto",
+            start: "300px center",
+            end: "300px center",
+            // scrub: 1,
+            // markers: true,
+            toggleActions: "restart none reverse none",
+        },
+        duration: 1,
+        opacity: 0,
+        scale: 0.1,
+        y: -70,
+        ease: "elastic.out(1, .3)",
+    });
+
+    gsap.to(".navbar-nav", {
+        scrollTrigger: {
+            trigger: "#navbarContainer",
+            start: "450px center",
+            end: "700px center",
+            scrub: 1,
+            toggleActions: "restart none reverse none",
+            // markers: true
+        },
+        x: "350px",
+        duration: 1,
+    });
+
+    gsap.to(".itemProfile", {
+        scrollTrigger: {
+            trigger: "#navbarContainer",
+            start: "400px center",
+            end: "550px center",
+            scrub: 1,
+            toggleActions: "restart none reverse none",
+            // markers: true
+        },
+        x: "-350px",
+        duration: 1,
+        stagger: {
+            from: "end",
+            amount: 0.5,
+        },
+    });
+});
+
 let mm = gsap.matchMedia();
 mm.add("(min-width: 599px)", () => {
     // mobile setup code here...
@@ -116,103 +202,44 @@ mm.add("(min-width: 599px)", () => {
     });
 });
 
-gsap.from(".imgLogo", {
+gsap.from(".titleTecnologias", {
     scrollTrigger: {
-        trigger: ".tecnologias-web",
-        start: "center center",
-        end: "end 100px",
-        scrub: 3,
-        // markers: true,
-        toggleActions: "restart none reverse none",
+        trigger: ".titleTecnologias",
+        start: "top 80%",
+        end: "bottom 60%",
+        scrub: true,
+        toggleActions: "restart none reset none",
     },
-    duration: 1,
     opacity: 0,
     scale: 0.5,
-    y: 50,
+    y: 100,
+});
+
+gsap.from(".imgLogo", {
+    scrollTrigger: {
+        trigger: ".imgLogo",
+        start: "20px 90%",
+        end: "50px 70%",
+        scrub: true,
+        toggleActions: "restart pause restart none",
+    },
+    opacity: 0,
+    scale: 0.5,
+    y: 60,
     stagger: 0.15,
 });
 
 gsap.from(".titleCapacidad", {
     scrollTrigger: {
-        trigger: ".capacidadesPersonales",
-        start: "center center",
-        end: "end 100px",
-        scrub: 1,
-        // markers: true,
-        toggleActions: "restart none reverse none",
+        trigger: ".titleCapacidad",
+        start: "100px 65%",
+        end: "200px 60%",
+        scrub: 3,
+        toggleActions: "restart none reset none",
     },
-    duration: 2,
     opacity: 0,
-    scale: 0.5,
-    y: 100,
-    stagger: 0.2,
+    scale: 0.1,
+    x: -200,
+    stagger: .5
 });
 
-gsap.from(".titleTecnologias", {
-    scrollTrigger: {
-        trigger: ".tecnologias-web",
-        start: "center center",
-        end: "end 100px",
-        scrub: 1,
-        // markers: true,
-        toggleActions: "restart none reverse none",
-    },
-    duration: 2,
-    opacity: 0,
-    scale: 0.5,
-    y: 100,
-    stagger: 0.2,
-});
-
-let ms = gsap.matchMedia();
-ms.add("(max-width: 799px)", () => {
-    // mobile setup code here...
-    gsap.from(".liContacto", {
-        scrollTrigger: {
-            trigger: "#contacto",
-            start: "100px center",
-            end: "center center",
-            scrub: 1,
-            // markers: true,
-            toggleActions: "restart none reverse none",
-        },
-        duration: 2,
-        opacity: 0,
-        scale: 0.3,
-        y: 10,
-        stagger: 0.2,
-    });
-
-    gsap.from(".animatedBtnFooter", {
-        scrollTrigger: {
-            trigger: "#contacto",
-            start: "300px center",
-            end: "300px center",
-            scrub: 1,
-            // markers: true,
-            toggleActions: "restart none reverse none",
-        },
-        duration: 2,
-        opacity: 0,
-        scale: 0.3,
-        y: -70,
-        stagger: 0.2,
-    });
-
-    // gsap.set(".navbar-nav", {
-    //     x: "1000px",
-    // });
-
-    gsap.to(".navbar-nav", {
-        scrollTrigger: {
-            trigger: "#navbarContainer",
-            start: "400px center",
-            end: "600px center",
-            scrub: 1,
-            toggleActions: "restart none reverse none",
-            // markers: true
-        },
-        x: "350px",
-        duration: 1,
-    });
-});
